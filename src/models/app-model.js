@@ -33,11 +33,12 @@ class AppModel extends Model{
   }
 
   /**
-   * @returns {Array<OfferGroup>}
+   * @return {Array<OfferGroup>}
    */
 
   getOfferGroups() {
-    return this.#offerGroups;
+    //@ts-ignore
+    return structuredClone(this.#offerGroups);
   }
 
   /**
